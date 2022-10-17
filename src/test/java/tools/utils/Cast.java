@@ -1,11 +1,9 @@
 package tools.utils;
 
+import java.util.Arrays;
+
 public class Cast {
     public static Integer[] toIntegerArray(int[] array) {
-        var out = new Integer[array.length];
-        for (int i = 0; i < array.length; i++) {
-            out[i] = array[i];
-        }
-        return out;
+        return Arrays.stream(array).boxed().toArray(Integer[]::new);
     }
 }
