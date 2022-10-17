@@ -7,7 +7,6 @@ import tools.utils.Cast;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
 public class TestSortedSquareArray {
     @Test
     public void testSortedSquareArrayHappyPath() {
