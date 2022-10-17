@@ -1,8 +1,12 @@
 package array;
 
-import org.junit.jupiter.api.Test;
-import tools.utils.Assert;
+import java.util.Arrays;
+
 import tools.utils.Cast;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 public class TestSortedSquareArray {
     @Test
@@ -10,7 +14,7 @@ public class TestSortedSquareArray {
         var array = new int[]{1, 2, 3, 5, 6, 8, 9};
         var expected = new Integer[]{1, 4, 9, 25, 36, 64, 81};
         var actual = Cast.toIntegerArray(SortedSquareArray.sortedSquaredArray(array));
-        Assert.equals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -18,7 +22,7 @@ public class TestSortedSquareArray {
         var array = new int[]{};
         var expected = new Integer[]{};
         var actual = Cast.toIntegerArray(SortedSquareArray.sortedSquaredArray(array));
-        Assert.equals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -26,6 +30,6 @@ public class TestSortedSquareArray {
         var array = new int[]{2, 4, 6};
         var expected = new Integer[]{10, 20, 30};
         var actual = Cast.toIntegerArray(SortedSquareArray.sortedSquaredArray(array));
-        Assert.notEquals(expected, actual);
+        Assertions.assertFalse(Arrays.equals(expected, actual));
     }
 }
